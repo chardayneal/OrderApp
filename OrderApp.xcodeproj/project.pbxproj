@@ -10,6 +10,10 @@
 		1C23F4982B64126200295BCB /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23F4972B64126200295BCB /* OrderConfirmationViewController.swift */; };
 		1C23F49A2B642B9700295BCB /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23F4992B642B9700295BCB /* MenuItemCell.swift */; };
 		1C23F49C2B6430E300295BCB /* Open Restaurant.app in Resources */ = {isa = PBXBuildFile; fileRef = 1C23F49B2B6430E300295BCB /* Open Restaurant.app */; };
+		1C7C73BD2B643E6800654D02 /* order2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C73B92B643E6800654D02 /* order2.png */; };
+		1C7C73BE2B643E6800654D02 /* order1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C73BA2B643E6800654D02 /* order1.png */; };
+		1C7C73BF2B643E6800654D02 /* order4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C73BB2B643E6800654D02 /* order4.png */; };
+		1C7C73C02B643E6800654D02 /* order3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C7C73BC2B643E6800654D02 /* order3.png */; };
 		1CEA2E472B62D20800463792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E462B62D20800463792 /* AppDelegate.swift */; };
 		1CEA2E492B62D20800463792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E482B62D20800463792 /* SceneDelegate.swift */; };
 		1CEA2E4E2B62D20800463792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEA2E4C2B62D20800463792 /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 		1C23F4972B64126200295BCB /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		1C23F4992B642B9700295BCB /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		1C23F49B2B6430E300295BCB /* Open Restaurant.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "Open Restaurant.app"; sourceTree = "<group>"; };
+		1C7C73B92B643E6800654D02 /* order2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order2.png; sourceTree = "<group>"; };
+		1C7C73BA2B643E6800654D02 /* order1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order1.png; sourceTree = "<group>"; };
+		1C7C73BB2B643E6800654D02 /* order4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order4.png; sourceTree = "<group>"; };
+		1C7C73BC2B643E6800654D02 /* order3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = order3.png; sourceTree = "<group>"; };
 		1CEA2E432B62D20800463792 /* OrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEA2E462B62D20800463792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CEA2E482B62D20800463792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +65,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7C73B82B643E4D00654D02 /* AppScreenshots */ = {
+			isa = PBXGroup;
+			children = (
+				1C7C73BA2B643E6800654D02 /* order1.png */,
+				1C7C73B92B643E6800654D02 /* order2.png */,
+				1C7C73BC2B643E6800654D02 /* order3.png */,
+				1C7C73BB2B643E6800654D02 /* order4.png */,
+			);
+			path = AppScreenshots;
+			sourceTree = "<group>";
+		};
 		1CEA2E3A2B62D20800463792 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +95,7 @@
 		1CEA2E452B62D20800463792 /* OrderApp */ = {
 			isa = PBXGroup;
 			children = (
+				1C7C73B82B643E4D00654D02 /* AppScreenshots */,
 				1C23F49B2B6430E300295BCB /* Open Restaurant.app */,
 				1CEA2E5E2B62D2C300463792 /* Resources */,
 				1CEA2E5D2B62D2B400463792 /* Controllers */,
@@ -197,7 +217,11 @@
 			files = (
 				1CEA2E532B62D20C00463792 /* LaunchScreen.storyboard in Resources */,
 				1C23F49C2B6430E300295BCB /* Open Restaurant.app in Resources */,
+				1C7C73BE2B643E6800654D02 /* order1.png in Resources */,
+				1C7C73BF2B643E6800654D02 /* order4.png in Resources */,
+				1C7C73C02B643E6800654D02 /* order3.png in Resources */,
 				1CEA2E502B62D20C00463792 /* Assets.xcassets in Resources */,
+				1C7C73BD2B643E6800654D02 /* order2.png in Resources */,
 				1CEA2E4E2B62D20800463792 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
