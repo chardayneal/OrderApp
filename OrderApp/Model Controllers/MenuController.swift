@@ -5,7 +5,7 @@
 //  Created by Charday Neal on 1/25/24.
 //
 
-import Foundation
+import UIKit
 
 class MenuController {
     
@@ -28,7 +28,7 @@ class MenuController {
     
     //custom error should network request fail to retrieve data
     enum MenuControllerError: Error, LocalizedError {
-        case categoriesNotFound, menuItemsnotFound, orderRequestFailed
+        case categoriesNotFound, menuItemsnotFound, orderRequestFailed, imageDataMissing
     }
     
     func fetchCategories() async throws -> [String] {
@@ -77,10 +77,29 @@ class MenuController {
         
     }
     
+    func fetchImage(from url: URL) async throws -> UIImage {
+        //make a network request
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        //validate response to network request else throw custom error
+        guard let httpResponse  = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {
+            throw MenuControllerError.imageDataMissing
+        }
+        
+        //validate conversion into UIImage
+        guard let image = UIImage(data: data) else {
+            throw MenuControllerError.imageDataMissing
+        }
+        
+        return image
+
+    }
+    
     typealias MinutesToPrepare = Int
     
     func submitOrder(forMenuIDs menuIDs: [Int]) async throws -> MinutesToPrepare {
-        let orderURL = baseURL.appendingPathExtension("order")
+        let orderURL = baseURL.appendingPathComponent("order")
        
         //initialize URLRequest and modify request type
         var request = URLRequest(url: orderURL)

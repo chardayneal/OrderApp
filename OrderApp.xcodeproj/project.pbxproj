@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C23F4982B64126200295BCB /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23F4972B64126200295BCB /* OrderConfirmationViewController.swift */; };
+		1C23F49A2B642B9700295BCB /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23F4992B642B9700295BCB /* MenuItemCell.swift */; };
 		1CEA2E472B62D20800463792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E462B62D20800463792 /* AppDelegate.swift */; };
 		1CEA2E492B62D20800463792 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E482B62D20800463792 /* SceneDelegate.swift */; };
 		1CEA2E4E2B62D20800463792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEA2E4C2B62D20800463792 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C23F4972B64126200295BCB /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		1C23F4992B642B9700295BCB /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
 		1CEA2E432B62D20800463792 /* OrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEA2E462B62D20800463792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CEA2E482B62D20800463792 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				1CEA2E672B62D79800463792 /* MenuItem.swift */,
 				1CEA2E6B2B62DB2200463792 /* ResponseModels.swift */,
 				1CEA2E6F2B62F21300463792 /* Order.swift */,
+				1C23F4992B642B9700295BCB /* MenuItemCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				1CEA2E612B62D5DC00463792 /* MenuTableViewController.swift */,
 				1CEA2E632B62D5EE00463792 /* OrderTableViewController.swift */,
 				1CEA2E652B62D75D00463792 /* MenuItemDetailViewController.swift */,
+				1C23F4972B64126200295BCB /* OrderConfirmationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 				1CEA2E642B62D5EE00463792 /* OrderTableViewController.swift in Sources */,
 				1CEA2E472B62D20800463792 /* AppDelegate.swift in Sources */,
 				1CEA2E492B62D20800463792 /* SceneDelegate.swift in Sources */,
+				1C23F49A2B642B9700295BCB /* MenuItemCell.swift in Sources */,
+				1C23F4982B64126200295BCB /* OrderConfirmationViewController.swift in Sources */,
 				1CEA2E602B62D5CC00463792 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

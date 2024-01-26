@@ -14,6 +14,8 @@ class MenuTableViewController: UITableViewController {
     private let category: String
     var menuItems = [MenuItem]()
     
+    var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
+    
     //custom initialization
     init?(coder: NSCoder, category: String) {
         self.category = category
@@ -30,6 +32,8 @@ class MenuTableViewController: UITableViewController {
         
         title = category.capitalized
         
+        tableView.rowHeight = 100.0
+        
         Task.init {
             do {
                 let menuResponseItems = try await MenuController.shared.fetchMenuItems(forCategory: category)
@@ -39,6 +43,15 @@ class MenuTableViewController: UITableViewController {
             }
         }
 
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        //cancel image fetching task that aren't needed
+        imageLoadTasks.forEach { key, value in
+            value.cancel()
+        }
     }
     
     func updateUI(with menuItems: [MenuItem]) {
@@ -85,13 +98,31 @@ class MenuTableViewController: UITableViewController {
     }
 
     func configureCell(_ cell: UITableViewCell, forCellAt indexPath: IndexPath) {
-        let item = menuItems[indexPath.row]
         
-        var content = cell.defaultContentConfiguration()
-        content.text = item.name
-        content.secondaryText = item.price.formatted(.currency(code: "usd"))
-        cell.contentConfiguration = content
+        guard let cell = cell as? MenuItemCell else {return}
         
+        let menuItem = menuItems[indexPath.row]
+        
+        cell.itemName = menuItem.name
+        cell.price = menuItem.price
+        cell.image = nil
+        
+        imageLoadTasks[indexPath] = Task.init {
+            if let image = try? await MenuController.shared.fetchImage(from: menuItem.imageURL) {
+                if let currentIndexPath = self.tableView.indexPath(for: cell), currentIndexPath == indexPath {
+                    cell.image = image
+                }
+            }
+            imageLoadTasks[indexPath] = nil
+        }
+        
+    }
+    
+    //cancel appropriate tasks
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        //cancel image fetching task if not needed
+        imageLoadTasks[indexPath]?.cancel()
     }
 
     /*
@@ -129,14 +160,5 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

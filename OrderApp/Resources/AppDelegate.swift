@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //store cache in app's temp directory
+        let tempDirectory = NSTemporaryDirectory()
+        let urlCache = URLCache(memoryCapacity: 25_000_000, diskCapacity: 50_000_000, diskPath: tempDirectory)
+        
+        //assign to shared cache that URLSession uses to perform requests
+        URLCache.shared = urlCache
+        
         return true
     }
 
