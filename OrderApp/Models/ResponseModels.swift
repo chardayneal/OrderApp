@@ -17,16 +17,6 @@ struct CategoriesResponse: Codable {
     let categories: [String]
 }
 
-//struct to contain list of items user has added
-struct Order: Codable {
-    var menuItems: [MenuItem]
-    
-    init(menuItems: [MenuItem] = []) {
-        self.menuItems = menuItems
-    }
-}
-
-
 //custom object of data from POST method network request
 struct OrderResponse: Codable {
     let prepTime: Int

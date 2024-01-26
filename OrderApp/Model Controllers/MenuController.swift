@@ -7,7 +7,10 @@
 
 import Foundation
 
-class ModelController {
+class MenuController {
+    
+    //create shared instance of controller
+    static let shared = MenuController()
     
     //initialize URL instance with local server address
     let baseURL = URL(string: "http://localhost:8080/")!
@@ -19,7 +22,7 @@ class ModelController {
     
     func fetchCategories() async throws -> [String] {
         //create a url with the file path to list of categories
-        let url = baseURL.appendingPathExtension("categories")
+        let url = baseURL.appendingPathComponent("categories")
         
         //make network request with URL
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -39,13 +42,13 @@ class ModelController {
     
     func fetchMenuItems(forCategory categoryName: String) async throws -> [MenuItem] {
         //create url with file path to list of categories
-        let baseMenuURL = baseURL.appendingPathExtension("menu?")
+        let baseMenuURL = baseURL.appendingPathComponent("menu")
         
         
         //add query from user to url
         var urlComponents = URLComponents(url: baseMenuURL, resolvingAgainstBaseURL: true)!
         urlComponents.queryItems = [URLQueryItem(name: "category", value: categoryName)]
-        
+
         //make network request with URL
         let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
         

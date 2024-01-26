@@ -19,6 +19,7 @@
 		1CEA2E682B62D79800463792 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E672B62D79800463792 /* MenuItem.swift */; };
 		1CEA2E6C2B62DB2200463792 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E6B2B62DB2200463792 /* ResponseModels.swift */; };
 		1CEA2E6E2B62DCCB00463792 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E6D2B62DCCB00463792 /* MenuController.swift */; };
+		1CEA2E702B62F21300463792 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEA2E6F2B62F21300463792 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1CEA2E672B62D79800463792 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		1CEA2E6B2B62DB2200463792 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		1CEA2E6D2B62DCCB00463792 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		1CEA2E6F2B62F21300463792 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				1CEA2E672B62D79800463792 /* MenuItem.swift */,
 				1CEA2E6B2B62DB2200463792 /* ResponseModels.swift */,
+				1CEA2E6F2B62F21300463792 /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			files = (
 				1CEA2E682B62D79800463792 /* MenuItem.swift in Sources */,
 				1CEA2E6E2B62DCCB00463792 /* MenuController.swift in Sources */,
+				1CEA2E702B62F21300463792 /* Order.swift in Sources */,
 				1CEA2E622B62D5DC00463792 /* MenuTableViewController.swift in Sources */,
 				1CEA2E6C2B62DB2200463792 /* ResponseModels.swift in Sources */,
 				1CEA2E662B62D75D00463792 /* MenuItemDetailViewController.swift in Sources */,
