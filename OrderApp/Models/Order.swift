@@ -9,6 +9,7 @@ import Foundation
 
 //struct to contain list of items user has added
 struct Order: Codable {
+    
     var menuItems: [MenuItem]
     
     init(menuItems: [MenuItem] = []) {

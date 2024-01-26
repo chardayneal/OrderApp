@@ -12,6 +12,17 @@ class MenuController {
     //create shared instance of controller
     static let shared = MenuController()
     
+    //property name of notification
+    static let orderUpdatedNotification = Notification.Name("MenuController.orderUpdated")
+    
+    
+    //whenever anything changes, all observers will have a chance to react
+    var order = Order() {
+        didSet {
+            NotificationCenter.default.post(name: MenuController.orderUpdatedNotification, object: nil)
+        }
+    }
+    
     //initialize URL instance with local server address
     let baseURL = URL(string: "http://localhost:8080/")!
     
