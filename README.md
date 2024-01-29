@@ -21,6 +21,16 @@ An iOS application that allows employees to navigate a restaurant’s menu with 
 
 You should see the application run on simulated device or hardware device of your choosing. Navigating between controllers should be fairly easy. If you have any issues or need help, feel free to contact me for assistance.
 
+## Usage
+Please be sure to open the “Open Restaurant” file separately from project. An advised way is to navigate to file through Finder on MacOS or File Explorer on Windows, then open file.
+
+<kbd><img style="border:2px" width="200" src="./OrderApp/AppScreenshots/orderAppServer.png"></kbd>
+
+- You must start the local server before running application to avoid displaying error.
+- Edit Categories / Edit Menu Items button allows you to edit the restaurants menu and categories to your liking.
+- The Open Images Folder button nests the images for menu items.
+<h4>Note: Images are named by their id tag following the PNG extension. To browse id tags, open Edit Menu Items button to explore information in relation to each menu item.</h4>
+
 
 
 ## Contributing
